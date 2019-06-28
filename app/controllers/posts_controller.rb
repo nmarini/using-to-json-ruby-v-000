@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def show
     respond_to do |format|
       format.html { render :show }
-      format.js { render json: @post.to_json(only: [:title, :description, :id], inlcude: [author: {only: [:name]}])}
+      format.json { render json: @post.to_json(only: [:title, :description, :id], inlcude: [author: {only: [:name]}])}
     end
   end
 
