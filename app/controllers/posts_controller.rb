@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { render :show }
       format.js { render json: @post.to_json(only: [:title, :description, :id], inlcude: [author: {only: [:name]}])}
-    end 
+    end
   end
 
   def new
